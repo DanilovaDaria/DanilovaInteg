@@ -18,7 +18,7 @@ pipeline {
         stages {
           stage('Checkout') {
             steps {
-              checkout([$class: 'GitSCM', branches: [[name: '*/main']],extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CONNECTION',url: 'git@github.com:DanilovaDaria/DanilovaInteg.git']]])
+              checkout([$class: 'GitSCM', branches: [[name: '*/main']],extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CONNECTION', url:'https://github.com/DanilovaDaria/DanilovaInteg.git']]])
                      }
                 }
                 stage('Build') {
