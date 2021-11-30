@@ -11,14 +11,14 @@ pipeline {
          GIT_USER_NAME="jenkins"
          GIT_USER_EMAIL="jenkins@com.ua"
          AWS_DEFAULT_REGION="eu-central-1"
-         BEANSTALK_APPLICATION_NAME="DanilovaLab9"
-         BEANSTALK_ENVIRONMENT_NAME="Danilovalab9-env"
+         BEANSTALK_APPLICATION_NAME="Daria9LabaJenkins"
+         BEANSTALK_ENVIRONMENT_NAME="Daria9labajenkins-env"
         }
 
         stages {
           stage('Checkout') {
             steps {
-              checkout([$class: 'GitSCM', branches: [[name: '*/main']],extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CONNECTION', url:'https://github.com/DanilovaDaria/DanilovaInteg.git']]])
+              checkout([$class: 'GitSCM', branches: [[name: '*/main']],extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CONNECTION', url:'git@github.com:DanilovaDaria/DanilovaInteg.git']]])
                      }
                 }
                 stage('Build') {
